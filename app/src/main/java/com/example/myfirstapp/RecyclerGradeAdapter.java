@@ -10,16 +10,13 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 
 public class RecyclerGradeAdapter extends RecyclerView.Adapter<RecyclerGradeAdapter.ViewHolder>{
 
-    List<Course> Courses=new ArrayList<Course>();;
+    List<Course> Courses;;
     Context context;
     View view1;
     ViewHolder viewHolder1;
-    TextView textView;
-    Random rnd = new Random();
 
     public RecyclerGradeAdapter(Context context1, List<Course> Courses1){
 
@@ -63,7 +60,7 @@ public class RecyclerGradeAdapter extends RecyclerView.Adapter<RecyclerGradeAdap
         // An abstract function
         String AVG(ArrayList x);
     }
-
+// display text in grade
     public String Text(int position){
         String text = Courses.get(position).getCourseTitle() + "\t\t           Average: -";
         final ArrayList<Assignment> assignments = Courses.get(position).getAssignments();

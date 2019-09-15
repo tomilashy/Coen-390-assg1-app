@@ -64,6 +64,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         int AVG(ArrayList x);
     }
 
+
+    // display text in numbers
     public String Text(int position){
         String text = Courses.get(position).getCourseTitle() + "\t\t           Average: -";
         final ArrayList<Assignment> assignments = Courses.get(position).getAssignments();

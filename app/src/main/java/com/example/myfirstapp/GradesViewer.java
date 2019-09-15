@@ -2,7 +2,6 @@ package com.example.myfirstapp;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -35,7 +34,7 @@ public class GradesViewer extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);   //show back button
 
 
-        //recycle view
+        //recycle view added
         context = getApplicationContext();
         relativeLayout = findViewById(R.id.relativelayout1);
         recyclerView = findViewById(R.id.recyclerview1);
@@ -47,13 +46,11 @@ public class GradesViewer extends AppCompatActivity {
 
         }
 
-        for (int i = 0; i < courses.size(); ++i) {
-            Log.d("coursesList", courses.get(i).getCourseTitle());
-        }
         Course.resetID();
         recyclerViewAdapter = new RecyclerViewAdapter(context, courses);
 
         recyclerView.setAdapter(recyclerViewAdapter);
+        //divider line
         DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(recyclerView.getContext(), DividerItemDecoration.VERTICAL);
         recyclerView.addItemDecoration(dividerItemDecoration);
     }
