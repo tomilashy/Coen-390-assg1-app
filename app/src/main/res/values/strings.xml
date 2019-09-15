@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">My Grades</string>
+    <string name="GradeViewer">View my Grades</string>
+</resources>
