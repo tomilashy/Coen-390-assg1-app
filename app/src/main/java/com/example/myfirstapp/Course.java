@@ -40,4 +40,15 @@ public class Course {
     }
 
 
+    public boolean hasAssignment() {
+        if(assignments.size()==0){
+            return false;
+        }else{
+            return true;
+        }
+    }
+
+    public void reduceID() {
+        courseID--;
+    }
 }

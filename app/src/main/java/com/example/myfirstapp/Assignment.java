@@ -7,7 +7,7 @@ import java.util.Random;
  * Edited by Jesutomi
  */
 public class Assignment {
-    private static int assID = 0; //static ID increments with every new assignment created
+    private static int assID = 1; //static ID increments with every new assignment created
     private String assignmentTitle; //title of assignment
     private int assignmentGrade; //grade of assignment
     private  String assignmentLetter;

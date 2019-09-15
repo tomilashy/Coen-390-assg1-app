@@ -40,9 +40,17 @@ public class GradesViewer extends AppCompatActivity {
         recyclerView = findViewById(R.id.recyclerview1);
         recylerViewLayoutManager = new LinearLayoutManager(context);
         recyclerView.setLayoutManager(recylerViewLayoutManager);
-
+        Course course;
         for (int j = 0; j < 5; j++) {
-            courses.add(Course.generateRandomCourse());
+            course= Course.generateRandomCourse();
+
+            while (!course.hasAssignment()){
+                course.reduceID();
+                course= Course.generateRandomCourse();
+
+            }
+
+            courses.add(course);
 
         }
 
