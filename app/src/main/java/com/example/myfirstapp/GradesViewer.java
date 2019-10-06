@@ -44,11 +44,11 @@ public class GradesViewer extends AppCompatActivity {
         for (int j = 0; j < 5; j++) {
             course= Course.generateRandomCourse();
 
-            while (!course.hasAssignment()){
-                course.reduceID();
-                course= Course.generateRandomCourse();
-
-            }
+//            while (!course.hasAssignment()){
+//                course.reduceID();
+//                course= Course.generateRandomCourse();
+//
+//            }
 
             courses.add(course);
 
